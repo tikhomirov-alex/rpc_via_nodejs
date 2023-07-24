@@ -1,0 +1,23 @@
+{
+  "name": "rpc_via_nodejs",
+  "version": "1.0.0",
+  "description": "Test task for green-api",
+  "scripts": {
+    "client": "npm start -prefix client",
+    "server": "npm start -prefix server",
+    "start": "concurrently \"npm run client\" \"npm run server\""
+  },
+  "keywords": [
+    "remote",
+    "procedure",
+    "call",
+    "RabbitMQ",
+    "rabbit",
+    "rpc"
+  ],
+  "author": "Alexander Tikhomirov <av-tikhomiroff@yandex.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
