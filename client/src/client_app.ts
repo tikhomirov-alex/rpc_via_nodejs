@@ -1,3 +1,4 @@
+import cors from 'cors'
 import dotenv from 'dotenv'
 import express from 'express'
 import log4js from 'log4js'
@@ -5,6 +6,7 @@ import RabbitMQClient from './rabbitmq/RabbitMQClient'
 
 const server = express()
 server.use(express.json())
+server.use(cors())
 
 dotenv.config()
 
@@ -17,7 +19,7 @@ server.post('/execute', async (req, res) => {
   res.send({ result })
 })
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 5000
 server.listen(port, async () => {
   logger.info(`[*] Client app has been started on port ${port}`)
   RabbitMQClient.init()

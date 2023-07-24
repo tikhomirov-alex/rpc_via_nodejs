@@ -20,12 +20,12 @@ export default class MessageHandler {
     switch (operation) {
       case 'multiply':
         await delay(4000)
-        response = num1 * num2
+        response = parseFloat(num1) * parseFloat(num2)
         break
 
       case 'sum':
         await delay(2000)
-        response = num1 + num2
+        response = parseFloat(num1) + parseFloat(num2)
         break
 
       default:
