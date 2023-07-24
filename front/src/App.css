@@ -1,5 +1,7 @@
 .App {
-  text-align: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .App-logo {
@@ -35,4 +37,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.grid {
+  width: 50vw;
+  height: 50vh;
+  float: left;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid_wrapper {
+  display: grid;
+  grid-template-areas:
+  "A B"
+  "C D"
+}
+
+.grid:nth-child(1) {
+  grid-area: 'A';
+  margin-top: 15%;
+  margin-left: 25%;
+}
+.grid:nth-child(2) {
+  grid-area: 'B';
+  margin-top: 15%;
+  margin-left: -25%;
+}
+.grid:nth-child(3) {
+  grid-area: 'C';
+  margin-top: -15%;
+  margin-left: 25%;
+}
+.grid:nth-child(4) {
+  grid-area: 'D';
+  margin-top: -15%;
+  margin-left: -25%;
 }
